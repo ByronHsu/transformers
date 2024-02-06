@@ -2918,7 +2918,7 @@ class Trainer:
                     self._save(output_dir, state_dict=state_dict)
             except ValueError:
                 logger.warning(
-                    " stage3_gather_16bit_weights_on_model_save=false. Saving the full checkpoint instead, use"
+                    " stage3_gather_16bit_weights_on_model_save=false. Saving the sharded checkpoint instead, use"
                     " zero_to_fp32.py to recover weights"
                 )
                 if self.args.should_save:
